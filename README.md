@@ -4,16 +4,16 @@
 
 #### Net Core runtime 6.0
 #### Visual Studio 2022
-#### SQL Server
+#### SQL Server 2018
 
 
 ## Installation
 
 Clone the repository to any source in your computer
 
-Download Database Image from [here](databaseimage.com)
+Download Database Image from [here](https://drive.google.com/file/d/18VG9k5llfQnP0WDAvmVzUDVhgCVUs7VI/view?usp=sharing)
 
-Install database image in SQLServer
+Install database image in SQLServer 2018
 
 
 
