@@ -12,7 +12,7 @@ namespace WebApplication1.Extensions
             services.AddAutoMapper(typeof(UsersMapper));
 
             //Adds core
-            services.AddTransient<IUserService, UserServices>();
+            services.AddTransient<IUserService, UserService>();
             services.AddTransient<ITokenClaims, TokenClaims>();
 
             //Adds repositories

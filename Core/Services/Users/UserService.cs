@@ -10,13 +10,13 @@ using Transversals.Filters;
 
 namespace Services
 {
-    public class UserServices : IUserService
+    public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;
         private readonly IConfiguration _configuration;
         private readonly ITokenClaims _tokenClaims;
-        public UserServices(IUserRepository userRepository, IMapper mapper, IConfiguration configuration, ITokenClaims tokenClaims)
+        public UserService(IUserRepository userRepository, IMapper mapper, IConfiguration configuration, ITokenClaims tokenClaims)
         {
             _userRepository = userRepository;
             _mapper = mapper;
@@ -83,6 +83,8 @@ namespace Services
         /// <returns></returns>
         public async Task<Response<IEnumerable<DatumDto>>> GetUsers(PaginationFilter filter)
         {
+            var test = await _userRepository.GetUsers(filter);
+            var parsed = _mapper.Map<IEnumerable<DatumDto>>(test);
             return new Response<IEnumerable<DatumDto>>() { Data = _mapper.Map<IEnumerable<DatumDto>>(await _userRepository.GetUsers(filter)), Succeeded = true };
         }
 

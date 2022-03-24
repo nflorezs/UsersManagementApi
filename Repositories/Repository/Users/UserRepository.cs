@@ -27,7 +27,7 @@ namespace Repositories
             dynamicParameters.Add(EnumsHelper.GetEnumDescription(EnumRootParams.PerPage), root.per_page);
             dynamicParameters.Add(EnumsHelper.GetEnumDescription(EnumRootParams.Total), root.total);
             dynamicParameters.Add(EnumsHelper.GetEnumDescription(EnumRootParams.TotalPages), root.total_pages);
-            dynamicParameters.Add(EnumsHelper.GetEnumDescription(EnumRootParams.Updated), root.updated);
+            dynamicParameters.Add(EnumsHelper.GetEnumDescription(EnumRootParams.Updated), DateTime.Now);
             dynamicParameters.Add(EnumsHelper.GetEnumDescription(EnumRootParams.ActualPage), root.actual_page);
             return await GetAsyncFirst<Root>(HelperDBParameters.BuilderFunction(
                 HelperDBParameters.EnumSchemas.DBO), dynamicParameters, CommandType.StoredProcedure);
@@ -40,6 +40,7 @@ namespace Repositories
         public async Task<Datum> CreateUser(Datum user)
         {
             DynamicParameters dynamicParameters = new DynamicParameters();
+            dynamicParameters.Add(EnumsHelper.GetEnumDescription(EnumUserParams.Id), user.id);
             dynamicParameters.Add(EnumsHelper.GetEnumDescription(EnumUserParams.Avatar), user.avatar);
             dynamicParameters.Add(EnumsHelper.GetEnumDescription(EnumUserParams.FirstName), user.first_name);
             dynamicParameters.Add(EnumsHelper.GetEnumDescription(EnumUserParams.Email), user.email);
