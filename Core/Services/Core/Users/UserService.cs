@@ -105,10 +105,17 @@ namespace Services
             }
 
             //If total pages is reached returns to first page
-            if (rootParams.actual_page == rootParams.total_pages)
-                rootParams.actual_page = 1;
+            if (rootParams != null)
+            {
+                if (rootParams.actual_page == rootParams.total_pages)
+                    rootParams.actual_page = 1;
+                else
+                    page = rootParams.actual_page++;
+            }
             else
-                page=rootParams.actual_page++;
+            {
+                rootParams = new RootDto() { actual_page=1};
+            }
 
 
             HttpClient client = new();
