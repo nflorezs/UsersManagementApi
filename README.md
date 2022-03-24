@@ -18,7 +18,7 @@ Install database image in SQLServer 2018
 ![image](https://user-images.githubusercontent.com/100897465/159998903-f21b908f-bc4b-428b-912a-2e69208ad6c5.png)
 
 
-
+You can execute this commands in CLI
 
 ```bash
 dotnet build
