@@ -6,6 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+	<PropertyGroup>
+		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\MyApi.xml</DocumentationFile>
+	</PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="Hangfire.AspNetCore" Version="1.7.28" />
@@ -21,8 +25,9 @@
   <ItemGroup>
     <ProjectReference Include="..\Commons\Mappers\Mappers.csproj" />
     <ProjectReference Include="..\Commons\Transversals\Transversals.csproj" />
-    <ProjectReference Include="..\Core\Services\Services.csproj" />
+    <ProjectReference Include="..\Core\Services\Core\Services.csproj" />
     <ProjectReference Include="..\Models\Entities\Entities.csproj" />
+    <ProjectReference Include="..\Repository\Repository\Repository.csproj" />
   </ItemGroup>
 
   <ItemGroup>

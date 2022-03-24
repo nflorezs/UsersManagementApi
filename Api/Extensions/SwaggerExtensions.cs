@@ -12,6 +12,8 @@ namespace WebApplication1.Extensions
                 options.SwaggerDoc(builder.Configuration.GetSection("VersionApi").Value, GetOpenApiInfo(builder.Configuration));
                 options.AddSecurityDefinition(builder.Configuration.GetSection("Jwt:Type").Value, GetOpenApiSecurityScheme(builder.Configuration));
                 options.AddSecurityRequirement(GetOpenApiSecurityRequirement());
+                var filePath = Path.Combine(System.AppContext.BaseDirectory, "MyApi.xml");
+                options.IncludeXmlComments(filePath);
             });
 
             return services;

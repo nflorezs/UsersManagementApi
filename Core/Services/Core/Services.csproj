@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -12,10 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Commons\Transversals\Transversals.csproj" />
-    <ProjectReference Include="..\..\Models\Dto\Dto.csproj" />
-    <ProjectReference Include="..\..\Models\Entities\Entities.csproj" />
-    <ProjectReference Include="..\..\Repositories\Repositories.csproj" />
+    <ProjectReference Include="..\..\..\Commons\Transversals\Transversals.csproj" />
+    <ProjectReference Include="..\..\..\Models\Entities\Entities.csproj" />
+    <ProjectReference Include="..\..\..\Repository\Repository\Repository.csproj" />
   </ItemGroup>
 
 </Project>

@@ -29,7 +29,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Commons\Mappers\Mappers.csproj" />
-    <ProjectReference Include="..\..\Core\Services\Services.csproj" />
+    <ProjectReference Include="..\..\Core\Services\Core\Services.csproj" />
   </ItemGroup>
 
 </Project>

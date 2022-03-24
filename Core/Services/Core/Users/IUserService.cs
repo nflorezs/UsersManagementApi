@@ -1,5 +1,4 @@
 ﻿using Dto;
-using Entities;
 using Transversals;
 using Transversals.Filters;
 

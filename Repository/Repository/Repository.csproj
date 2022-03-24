@@ -13,8 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Commons\Transversals\Transversals.csproj" />
-    <ProjectReference Include="..\Models\Entities\Entities.csproj" />
+    <ProjectReference Include="..\..\Commons\Transversals\Transversals.csproj" />
+    <ProjectReference Include="..\..\Models\Entities\Entities.csproj" />
+    <ProjectReference Include="..\Data\Data.csproj" />
   </ItemGroup>
 
 </Project>
